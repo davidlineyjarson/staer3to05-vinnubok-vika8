@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="is">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>STÆR3TÖ05 · Vinnubók 8</title>
+  <script>
+    window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+  <style>
+    :root{--ink:#17293b;--muted:#5f6f7c;--paper:#fffdf8;--page:#f4f0e7;--line:#d7d9d4;--teal:#176b6b;--teal-dark:#0d4f50;--teal-soft:#e7f3f1;--orange:#c9632c;--orange-soft:#fff0e5;--purple:#684a8a;--purple-soft:#f2edf8;--gold:#dcae3e;--gold-soft:#fff7db;--green:#2f7657;--green-soft:#e8f5ed;--shadow:0 8px 24px rgba(23,41,59,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--page);color:var(--ink);font:18px/1.62 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit;color:inherit}button,input,label,textarea{touch-action:manipulation}a{color:var(--teal-dark);font-weight:750}.shell{max-width:1160px;margin:auto;background:var(--paper);min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.08)}
+    header{padding:32px clamp(20px,5vw,64px) 26px;border-bottom:6px solid var(--teal);background:linear-gradient(135deg,#fffdf8 0%,#f0f8f6 100%)}.eyebrow{margin:0 0 8px;color:var(--teal-dark);font-weight:800;letter-spacing:.055em}.title{margin:0;font-size:clamp(2rem,5vw,3.35rem);line-height:1.06}.subtitle{max-width:68ch;margin:12px 0 0;color:var(--muted)}
+    .tabs-wrap{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}.tabs{display:flex;overflow-x:auto;padding:0 clamp(12px,4vw,48px)}.tab{flex:1 0 auto;border:0;border-bottom:4px solid transparent;background:transparent;padding:13px 18px;font-weight:800;cursor:pointer}.tab[aria-selected="true"]{color:var(--teal-dark);border-color:var(--teal);background:var(--teal-soft)}.tab:disabled{cursor:not-allowed;color:#7c8588;background:#f0f0ed;opacity:.62}.tab-note{display:block;margin-top:1px;font-size:.7rem;font-weight:700}.tab:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:4px solid rgba(201,99,44,.35);outline-offset:2px}
+    .progress-wrap{padding:14px clamp(20px,5vw,64px);border-bottom:1px solid var(--line);background:#fff}.progress-row{display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:.94rem}.progress-track{height:12px;margin-top:9px;border-radius:999px;background:#e4e8e6;overflow:hidden}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--teal),#2f9992);transition:width .25s ease}.progress-count{font-weight:800;white-space:nowrap}
+    main{padding:28px clamp(18px,5vw,64px) 70px}.panel{display:none}.panel.active{display:block}.day-head{max-width:72ch;margin-bottom:28px}.day-head h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15;margin:.15em 0}.goal{padding:16px 19px;border-left:6px solid var(--teal);background:var(--teal-soft);border-radius:0 12px 12px 0;font-weight:700}.section{margin:38px 0}.section-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:14px}.section h3{margin:0;font-size:clamp(1.38rem,3vw,1.9rem)}.badge{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;font-size:.84rem;font-weight:850;letter-spacing:.035em}.badge.core{color:#fff;background:var(--teal-dark)}.badge.reserve{color:var(--purple);background:var(--purple-soft);border:1px solid #cfc0df}.card{margin:16px 0;padding:clamp(20px,4vw,30px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.card h4{font-size:1.28rem;margin:0 0 10px}.core-card{border-left:7px solid var(--teal)}.reserve-card{background:#fbf9fd;border-left:7px solid #b9a5cf;box-shadow:none}.scene-card{border:2px solid #e5bd56;background:linear-gradient(145deg,#fffdf5,#fff4c9);box-shadow:0 10px 28px rgba(126,89,12,.12)}.scene-kicker{display:inline-block;margin-bottom:8px;color:#6a4a00;font-weight:900;letter-spacing:.05em}.lede{max-width:68ch}.muted{color:var(--muted)}.notice{padding:14px 17px;border-left:5px solid var(--orange);background:var(--orange-soft);border-radius:0 10px 10px 0}.warning{padding:14px 17px;background:var(--gold-soft);border:1px solid #ead27e;border-radius:10px;font-weight:750}.formula{margin:18px 0;padding:16px;overflow-x:auto;text-align:center;background:var(--teal-soft);border-radius:12px;font-size:clamp(.86rem,2.5vw,1.08rem)}
+    .steps{list-style:none;margin:18px 0;padding:0;display:grid;gap:10px}.check-row{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:#fafaf7;border:1px solid var(--line);border-radius:10px}.check-row input{width:22px;height:22px;flex:0 0 auto;margin-top:2px;accent-color:var(--teal)}.completion{margin-top:22px;background:var(--green-soft);border-color:#a9d1bb;font-weight:800}.completion input{accent-color:var(--green)}
+    .field{margin:18px 0}.field label,.field-title{display:block;margin-bottom:7px;font-weight:800}.field textarea,.field input[type="text"],.field input[type="number"]{width:100%;border:2px solid #b8c1c5;border-radius:10px;background:#fff;padding:12px 14px}.field textarea{min-height:112px;resize:vertical}.short-input{max-width:180px}.autosave{font-size:.86rem;color:var(--muted);margin-top:5px}.choice-row{display:flex;flex-wrap:wrap;gap:10px}.choice{display:flex;align-items:center;gap:8px;padding:10px 14px;border:2px solid #bdc7c8;border-radius:999px;background:#fff}.choice input{width:20px;height:20px;accent-color:var(--teal)}
+    .table-scroll{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;background:#fff;min-width:610px}th,td{padding:11px 12px;border:1px solid var(--line);text-align:center}th{background:var(--teal-soft);font-weight:850}td input{width:100%;min-width:72px;padding:8px;border:1px solid #aab5b8;border-radius:7px}.sum-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin-top:16px}.sum-grid label{font-weight:800}.sum-grid input{width:100%;padding:10px;border:2px solid #bdc6c8;border-radius:8px;margin-top:5px}.code-list{display:grid;gap:9px;margin:15px 0}.code-line{padding:10px 12px;background:#f4f6f5;border-left:4px solid var(--teal);border-radius:5px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border:2px solid var(--teal-dark);border-radius:9px;background:var(--teal-dark);color:#fff;font-weight:800;text-decoration:none;cursor:pointer}.btn.secondary{background:#fff;color:var(--teal-dark)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.self-grid{display:grid;gap:12px}.self-item{display:flex;gap:12px;align-items:flex-start;padding:15px;background:#fff;border:1px solid var(--line);border-radius:11px}.self-item input{width:22px;height:22px;margin-top:2px;accent-color:var(--teal)}.summary-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}.summary-box{padding:16px;background:#fff;border:1px solid var(--line);border-radius:12px;text-align:center}.summary-box strong{display:block;font-size:1.3rem;color:var(--teal-dark)}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+    .warmup{border-left:7px solid var(--orange);background:#fffdfa}.warmup-intro{max-width:66ch}.quiz-grid{display:grid;gap:16px;margin-top:18px}.quiz-card{padding:18px;border:1px solid var(--line);border-radius:13px;background:#fff}.quiz-card h4{margin:0 0 12px;font-size:1.08rem}.quiz-options{display:grid;gap:9px}.quiz-option{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border:2px solid #c7cecf;border-radius:9px;cursor:pointer}.quiz-option:hover{border-color:var(--teal)}.quiz-option input{width:20px;height:20px;flex:0 0 auto;margin-top:2px;accent-color:var(--teal)}.quiz-feedback{display:none;margin:12px 0 0;padding:10px 12px;border-left:5px solid var(--orange);border-radius:0 8px 8px 0;background:var(--orange-soft);font-weight:700}.quiz-feedback.show{display:block}.quiz-feedback.correct{border-color:var(--green);background:var(--green-soft)}.warmup-status{margin-top:18px;padding:12px 14px;border-radius:9px;background:#f2f3f1;color:var(--muted);font-weight:800}.warmup-status.complete{background:var(--green-soft);color:#1f5d42}.scatter-wrap{max-width:390px;margin:12px auto 16px}.scatter{display:block;width:100%;height:auto;background:#fbfcfb;border:1px solid var(--line);border-radius:10px}.scatter .axis{stroke:#53646b;stroke-width:2}.scatter .dot{fill:var(--teal-dark)}.scatter text{font:14px system-ui,sans-serif;fill:#40535d}
+    @media(max-width:760px){body{font-size:17px}.split,.summary-grid{grid-template-columns:1fr}.tab{padding:13px 14px}.card{border-radius:12px}.progress-row{align-items:flex-start;flex-direction:column;gap:4px}.choice-row{display:grid}.choice{border-radius:10px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <p class="eyebrow">STÆR3TÖ05 · Vika 8</p>
+    <h1 class="title">Fylgni og Pearson <em>r</em></h1>
+    <p class="subtitle">Sjáðu tengslin, lýstu þeim, reiknaðu fylgnina og færðu greininguna yfir í Excel.</p>
+  </header>
+
+  <div class="tabs-wrap">
+    <nav class="tabs" aria-label="Dagar vinnubókar">
+      <button class="tab" type="button" data-tab="tue" aria-selected="true">Þriðjudagur</button>
+      <button class="tab" type="button" data-tab="wed" aria-selected="false" disabled aria-disabled="true">Miðvikudagur<span class="tab-note">Opnað síðar</span></button>
+      <button class="tab" type="button" data-tab="thu" aria-selected="false" disabled aria-disabled="true">Fimmtudagur<span class="tab-note">Opnað síðar</span></button>
+      <button class="tab" type="button" data-tab="fri" aria-selected="false" disabled aria-disabled="true">Föstudagur<span class="tab-note">Opnað síðar</span></button>
+      <button class="tab" type="button" data-tab="self" aria-selected="false" disabled aria-disabled="true">Hvað kann ég?<span class="tab-note">Opnað síðar</span></button>
+    </nav>
+  </div>
+
+  <div class="progress-wrap" aria-live="polite">
+    <div class="progress-row"><span id="progressLabel">Framvinda þriðjudags</span><span class="progress-count" id="progressCount">0 af 3 kjarnaverkefnum</span></div>
+    <div class="progress-track" role="progressbar" aria-label="Framvinda" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar" id="progressBar"></div></div>
+  </div>
+
+  <main>
+    <section class="panel active" id="panel-tue" data-panel="tue">
+      <div class="day-head"><p class="eyebrow">Þriðjudagur · Kaflar 10.1–10.2</p><h2>Sjá og túlka fylgni</h2><p class="goal">Í dag æfir þú að teikna punktarit og greina stefnu og styrk fylgni.</p></div>
+
+      <section class="section" id="tue-warmup" data-warmup="W8_TUE_WARMUP">
+        <div class="section-head"><span class="badge core">UPPHITUN</span><h3>Prófaðu sjálf/ur</h3></div>
+        <article class="card warmup"><p class="warmup-intro">Lestu úr punktaritunum. Þú þarft ekki að reikna fylgnistuðulinn.</p>
+          <div class="quiz-grid">
+            <div class="quiz-card" data-quiz="W8_TUE_Q1" data-answer="higher" data-correct="Rétt. Punktarnir hækka saman, þannig að hærra X tengist líklega hærra Y." data-wrong="Skoðaðu stefnuna frá vinstri til hægri: punktaskýið hækkar.">
+              <h4>1. Kláraðu setninguna</h4>
+              <div class="scatter-wrap"><svg class="scatter" viewBox="0 0 360 210" role="img" aria-label="Punktarit með sterkri jákvæðri fylgni"><line class="axis" x1="42" y1="174" x2="334" y2="174"/><line class="axis" x1="42" y1="174" x2="42" y2="20"/><text x="326" y="199">X</text><text x="18" y="28">Y</text><circle class="dot" cx="72" cy="151" r="6"/><circle class="dot" cx="112" cy="139" r="6"/><circle class="dot" cx="151" cy="113" r="6"/><circle class="dot" cx="193" cy="101" r="6"/><circle class="dot" cx="232" cy="73" r="6"/><circle class="dot" cx="274" cy="59" r="6"/><circle class="dot" cx="312" cy="34" r="6"/></svg></div>
+              <p>Einstaklingur með háa einkunn á prófi X fær líklega ______ einkunn á prófi Y.</p>
+              <div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_TUE_Q1" value="higher" data-save="W8_TUE_Q1"> hærri</label><label class="quiz-option"><input type="radio" name="W8_TUE_Q1" value="lower" data-save="W8_TUE_Q1"> lægri</label><label class="quiz-option"><input type="radio" name="W8_TUE_Q1" value="unrelated" data-save="W8_TUE_Q1"> óháða</label></div><div class="quiz-feedback" aria-live="polite"></div>
+            </div>
+            <div class="quiz-card" data-quiz="W8_TUE_Q2" data-answer="negative" data-correct="Rétt. Punktaskýið hallar niður þegar farið er frá vinstri til hægri." data-wrong="Skoðaðu hvort Y hækkar eða lækkar þegar X hækkar.">
+              <h4>2. Hvernig fylgni sérðu?</h4>
+              <div class="scatter-wrap"><svg class="scatter" viewBox="0 0 360 210" role="img" aria-label="Punktarit með neikvæðri fylgni"><line class="axis" x1="42" y1="174" x2="334" y2="174"/><line class="axis" x1="42" y1="174" x2="42" y2="20"/><text x="326" y="199">X</text><text x="18" y="28">Y</text><circle class="dot" cx="69" cy="39" r="6"/><circle class="dot" cx="108" cy="55" r="6"/><circle class="dot" cx="149" cy="79" r="6"/><circle class="dot" cx="190" cy="91" r="6"/><circle class="dot" cx="231" cy="119" r="6"/><circle class="dot" cx="271" cy="137" r="6"/><circle class="dot" cx="313" cy="154" r="6"/></svg></div>
+              <div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_TUE_Q2" value="positive" data-save="W8_TUE_Q2"> Jákvæða fylgni</label><label class="quiz-option"><input type="radio" name="W8_TUE_Q2" value="negative" data-save="W8_TUE_Q2"> Neikvæða fylgni</label><label class="quiz-option"><input type="radio" name="W8_TUE_Q2" value="none" data-save="W8_TUE_Q2"> Enga skýra fylgni</label></div><div class="quiz-feedback" aria-live="polite"></div>
+            </div>
+            <div class="quiz-card" data-quiz="W8_TUE_Q3" data-answer="p85" data-correct="Rétt. Formerkið er jákvætt og gildið er nálægt 1, sem passar við sterka jákvæða fylgni." data-wrong="Athugaðu bæði formerkið og hversu nálægt núlli eða einum stuðullinn er.">
+              <h4>3. Hvaða fylgnistuðull lýsir fyrsta punktaritinu best?</h4>
+              <div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_TUE_Q3" value="p85" data-save="W8_TUE_Q3"> <em>r</em> = +0,85</label><label class="quiz-option"><input type="radio" name="W8_TUE_Q3" value="n75" data-save="W8_TUE_Q3"> <em>r</em> = −0,75</label><label class="quiz-option"><input type="radio" name="W8_TUE_Q3" value="n10" data-save="W8_TUE_Q3"> <em>r</em> = −0,10</label></div><div class="quiz-feedback" aria-live="polite"></div>
+            </div>
+            <div class="quiz-card" data-quiz="W8_TUE_Q4" data-answer="strong-negative" data-correct="Rétt. Neikvæða formerkið segir til um stefnu og stærðin 0,82 bendir til sterkrar fylgni." data-wrong="Neikvætt formerki segir stefnu fylgninnar, ekki að hún sé veik.">
+              <h4>4. Punktarit hefur <em>r</em> = −0,82. Hvað segir það okkur?</h4>
+              <div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_TUE_Q4" value="weak" data-save="W8_TUE_Q4"> Fylgnin er veik vegna þess að <em>r</em> er neikvætt.</label><label class="quiz-option"><input type="radio" name="W8_TUE_Q4" value="strong-negative" data-save="W8_TUE_Q4"> Fylgnin er sterk og neikvæð.</label><label class="quiz-option"><input type="radio" name="W8_TUE_Q4" value="none" data-save="W8_TUE_Q4"> Engin fylgni er milli breytanna.</label></div><div class="quiz-feedback" aria-live="polite"></div>
+            </div>
+          </div><div class="warmup-status" aria-live="polite">0 af 4 rétt</div>
+        </article>
+      </section>
+
+      <section class="section" id="tue-book1">
+        <div class="section-head"><span class="badge core">KJARNI</span><h3>Dæmi 1 · bls. 231</h3></div>
+        <article class="card core-card">
+          <p class="lede">Vinnið 2–3 saman við töflu. Notið gögnin í <strong>Dæmi 1 á bls. 231</strong>.</p>
+          <div class="notice"><strong>Áhersla:</strong> Teiknið og lýsið fylgninni. Ekki reikna Pearson <em>r</em> í þessu verkefni.</div>
+          <div class="steps" aria-label="Gátlisti fyrir Dæmi 1">
+            <label class="check-row"><input type="checkbox" data-save="tue_book1_xandy"><span>Greinið hvað er <em>X</em> og hvað er <em>Y</em>.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_book1_axes"><span>Teiknið og merkið ása.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_book1_points"><span>Setjið öll (<em>X</em>, <em>Y</em>)-pör inn á punktaritið.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_book1_direction"><span>Ákveðið hvort fylgnin sé jákvæð eða neikvæð.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_book1_strength"><span>Metið hvort fylgnin virðist sterk eða veik.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_book1_sentence"><span>Skrifið eina setningu sem lýsir tengslunum.</span></label>
+          </div>
+          <label class="check-row completion"><input type="checkbox" data-core="W8_TUE_BOOK1"><span>Við höfum lokið Dæmi 1 og varðveitt vinnuna.</span></label>
+        </article>
+      </section>
+
+      <section class="section" id="tue-simpsons">
+        <div class="section-head"><span class="badge core">KJARNI</span><h3>Bear Patrol · Fylgni eða orsök?</h3></div>
+        <article class="card scene-card">
+          <span class="scene-kicker">SIMPSONS-VERKEFNI · HLUTI 1</span>
+          <h4>Horfum</h4>
+          <p>Í atriði úr <em>Much Apu About Nothing</em> telur Homer að Bear Patrol virki vegna þess að engir birnir sjást. Lisa svarar með steini sem á að fæla burt tígrisdýr.</p>
+          <p><a class="btn" href="https://clip.cafe/the-simpsons-1989/ahh-not-a-bear-in-sight/" target="_blank" rel="noopener noreferrer">Opna myndbandsatriðið</a></p>
+          <div class="field"><label for="homerLogic">💬 Ræðið saman: Hvað er að rökhugsun Homers?</label><textarea id="homerLogic" data-save="tue_homer_logic" placeholder="Skráið hugmynd hópsins …"></textarea><p class="autosave">Textinn vistast sjálfkrafa í þessum vafra.</p></div>
+        </article>
+
+        <article class="card scene-card">
+          <span class="scene-kicker">SIMPSONS-VERKEFNI · HLUTI 2</span>
+          <h4>Homer safnar gögnum</h4>
+          <p>Homer er ekki sannfærður. Hann ákveður því að safna gögnum til að sýna fram á að Bear Patrol virki.</p>
+          <div class="notice"><strong>Athugið:</strong> Þetta eru skálduð kennslugögn, ekki raunveruleg gögn úr <em>The Simpsons</em>.</div>
+          <div class="table-scroll"><table><thead><tr><th>Vika</th><th>Bear Patrol-ferðir (<em>X</em>)</th><th>Birnir sem sjást (<em>Y</em>)</th></tr></thead><tbody>
+            <tr><td>1</td><td>1</td><td>8</td></tr><tr><td>2</td><td>2</td><td>7</td></tr><tr><td>3</td><td>3</td><td>7</td></tr><tr><td>4</td><td>4</td><td>5</td></tr><tr><td>5</td><td>5</td><td>4</td></tr><tr><td>6</td><td>6</td><td>2</td></tr><tr><td>7</td><td>7</td><td>1</td></tr>
+          </tbody></table></div>
+          <p class="lede">Vinnið aftur 2–3 saman við töflu.</p>
+          <div class="steps" aria-label="Gátlisti fyrir Bear Patrol-gögn">
+            <label class="check-row"><input type="checkbox" data-save="tue_bear_axes"><span>Merkið <em>X</em>- og <em>Y</em>-ás.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_bear_points"><span>Teiknið alla punktana.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_bear_direction"><span>Ákveðið stefnu fylgninnar.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_bear_strength"><span>Metið styrk fylgninnar.</span></label>
+            <label class="check-row"><input type="checkbox" data-save="tue_bear_sentence"><span>Skrifið eina setningu sem lýsir því sem gögnin sýna.</span></label>
+          </div>
+          <div class="warning">Homer segir: „Sjáið! Bear Patrol veldur því að björnum fækkar!“</div>
+          <div class="field"><label for="bearConclusion">💬 Hvað getum við í raun ályktað út frá gögnunum?</label><textarea id="bearConclusion" data-save="tue_bear_conclusion" placeholder="Skráið rökstuðning hópsins …"></textarea></div>
+          <p><strong>Gögnin sýna fylgni. En sannar fylgnin að Bear Patrol valdi fækkun bjarna?</strong></p>
+          <label class="check-row completion"><input type="checkbox" data-core="W8_TUE_SIMPSONS"><span>Við höfum lokið Bear Patrol-verkefninu og varðveitt rökstuðninginn.</span></label>
+        </article>
+      </section>
+    </section>
+
+    <section class="panel" id="panel-wed" data-panel="wed">
+      <div class="day-head"><p class="eyebrow">Miðvikudagur · Kafli 10.3</p><h2>Reiknum Pearson <em>r</em></h2><p class="goal">Í dag færum við okkur frá því að sjá fylgni yfir í að reikna hana.</p></div>
+      <section class="section" id="wed-warmup" data-warmup="W8_WED_WARMUP"><div class="section-head"><span class="badge core">UPPHITUN</span><h3>Undirbúðu vinnutöfluna</h3></div><article class="card warmup"><p class="warmup-intro">Þessi stuttu atriði undirbúa handreikninginn. Aðalútreikningurinn fer áfram fram á töflu.</p><div class="quiz-grid">
+        <div class="quiz-card" data-quiz="W8_WED_Q1" data-answer="five" data-correct="Rétt. Vinnutaflan þarf dálkana X, Y, X², Y² og XY." data-wrong="Hugsaðu um allar stærðirnar sem koma fyrir í Pearson-formúlunni."><h4>1. Hvaða dálkar eiga að vera í 5-dálka vinnutöflunni?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_WED_Q1" value="five" data-save="W8_WED_Q1"> <em>X</em>, <em>Y</em>, <em>X</em><sup>2</sup>, <em>Y</em><sup>2</sup>, <em>XY</em></label><label class="quiz-option"><input type="radio" name="W8_WED_Q1" value="four" data-save="W8_WED_Q1"> <em>X</em>, <em>Y</em>, <em>X</em> + <em>Y</em>, <em>X</em> − <em>Y</em></label><label class="quiz-option"><input type="radio" name="W8_WED_Q1" value="three" data-save="W8_WED_Q1"> <em>X</em>, <em>Y</em>, <em>XY</em></label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+        <div class="quiz-card" data-quiz="W8_WED_Q2" data-answer="28" data-correct="Rétt. XY fæst með því að margfalda saman gildin í sömu röð: 4 · 7 = 28." data-wrong="XY er margfeldi X og Y í sömu gagnaröð."><h4>2. Ef <em>X</em> = 4 og <em>Y</em> = 7, hvað er <em>XY</em>?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_WED_Q2" value="11" data-save="W8_WED_Q2"> 11</label><label class="quiz-option"><input type="radio" name="W8_WED_Q2" value="28" data-save="W8_WED_Q2"> 28</label><label class="quiz-option"><input type="radio" name="W8_WED_Q2" value="49" data-save="W8_WED_Q2"> 49</label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+        <div class="quiz-card" data-quiz="W8_WED_Q3" data-answer="sum-squares" data-correct="Rétt. Í ΣX² er hvert X-gildi sett í annað veldi áður en lagt er saman." data-wrong="Athugaðu röð aðgerðanna: fyrst annað veldi á hvert gildi, síðan summa."><h4>3. Hvort táknar summu allra <em>X</em>-gilda eftir að hvert þeirra hefur verið sett í annað veldi?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_WED_Q3" value="sum-squares" data-save="W8_WED_Q3"> Σ<em>X</em><sup>2</sup></label><label class="quiz-option"><input type="radio" name="W8_WED_Q3" value="square-sum" data-save="W8_WED_Q3"> (Σ<em>X</em>)<sup>2</sup></label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+      </div><div class="warmup-status" aria-live="polite">0 af 3 rétt</div></article></section>
+      <section class="section" id="wed-book4">
+        <div class="section-head"><span class="badge core">KJARNI</span><h3>Dæmi 4 · bls. 231</h3></div>
+        <article class="card core-card">
+          <p><strong>Verð og sala · <em>N</em> = 5</strong></p><p>Vinnið 2–3 saman við töflu. Sækið gildin úr Dæmi 4 í kennslubókinni.</p>
+          <ol><li>Skráið <em>X</em> og <em>Y</em>.</li><li>Reiknið <em>X</em><sup>2</sup>.</li><li>Reiknið <em>Y</em><sup>2</sup>.</li><li>Reiknið <em>XY</em>.</li><li>Finnið dálkasummurnar.</li><li>Setjið summurnar í Pearson-formúluna.</li><li>Reiknið <em>r</em>.</li><li>Túlkið niðurstöðuna.</li></ol>
+          <div class="table-scroll"><table aria-label="Vinnutafla fyrir Pearson r"><thead><tr><th><em>X</em></th><th><em>Y</em></th><th><em>X</em><sup>2</sup></th><th><em>Y</em><sup>2</sup></th><th><em>XY</em></th></tr></thead><tbody id="pearsonRows"></tbody></table></div>
+          <div class="sum-grid"><label>ΣX<input data-save="wed_sum_x" inputmode="decimal"></label><label>ΣY<input data-save="wed_sum_y" inputmode="decimal"></label><label>ΣX²<input data-save="wed_sum_x2" inputmode="decimal"></label><label>ΣY²<input data-save="wed_sum_y2" inputmode="decimal"></label><label>ΣXY<input data-save="wed_sum_xy" inputmode="decimal"></label><label>N<input data-save="wed_n" value="5" inputmode="numeric"></label></div>
+          <div class="formula">\[r_{xy}=\frac{N\sum XY-(\sum X)(\sum Y)}{\sqrt{\left[N\sum X^2-(\sum X)^2\right]\left[N\sum Y^2-(\sum Y)^2\right]}}\]</div>
+          <div class="warning">⚠️ Ekki rugla saman Σ<em>X</em><sup>2</sup> og (Σ<em>X</em>)<sup>2</sup>.</div>
+          <div class="field short-input"><label for="pearsonR"><em>r</em> =</label><input id="pearsonR" type="text" data-save="wed_r" inputmode="decimal"></div>
+          <div class="split"><div class="field"><label for="pearsonSign">Hvað segir formerkið okkur?</label><textarea id="pearsonSign" data-save="wed_sign"></textarea></div><div class="field"><label for="pearsonSize">Hvað segir stærð <em>r</em> okkur?</label><textarea id="pearsonSize" data-save="wed_size"></textarea></div></div>
+          <label class="check-row completion"><input type="checkbox" data-core="W8_WED_BOOK4"><span>Við höfum lokið Dæmi 4 og varðveitt útreikninga og túlkun.</span></label>
+        </article>
+      </section>
+      <section class="section"><div class="section-head"><span class="badge reserve">VARA</span><h3>Ef þið klárið fyrr</h3></div><article class="card reserve-card"><ol><li>Sýnidæmi 6 / Tafla 2 · bls. 228.</li><li>Dæmi 2 · bls. 231.</li></ol><label class="check-row"><input type="checkbox" data-save="wed_extra"><span>Við unnum í VARA-verkefnum.</span></label></article></section>
+    </section>
+
+    <section class="panel" id="panel-thu" data-panel="thu">
+      <div class="day-head"><p class="eyebrow">Fimmtudagur · Excel</p><h2>Sama hugmynd, nú í Excel</h2><p class="goal">Í gær gerðum við reikningana í höndunum. Í dag látum við Excel hjálpa okkur.</p></div>
+      <section class="section" id="thu-warmup" data-warmup="W8_THU_WARMUP"><div class="section-head"><span class="badge core">UPPHITUN</span><h3>Veldu rétta Excel-aðgerð</h3></div><article class="card warmup"><p class="warmup-intro">Veldu formúluna eða graftegundina. Síðan framkvæmir þú vinnuna sjálf/ur í Excel.</p><div class="quiz-grid">
+        <div class="quiz-card" data-quiz="W8_THU_Q1" data-answer="square" data-correct="Rétt. ^2 setur gildið í reit A2 í annað veldi." data-wrong="Í Excel er ^ veldismerkið."><h4>1. Hvaða formúla reiknar <em>X</em><sup>2</sup> þegar <em>X</em> er í A2?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_THU_Q1" value="square" data-save="W8_THU_Q1"> =A2^2</label><label class="quiz-option"><input type="radio" name="W8_THU_Q1" value="double" data-save="W8_THU_Q1"> =A2*2</label><label class="quiz-option"><input type="radio" name="W8_THU_Q1" value="sum" data-save="W8_THU_Q1"> =SUM(A2)</label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+        <div class="quiz-card" data-quiz="W8_THU_Q2" data-answer="product" data-correct="Rétt. XY fæst með því að margfalda X-reitinn og Y-reitinn í sömu röð." data-wrong="Notaðu margföldunarmerkið * milli reitanna A2 og B2."><h4>2. Hvaða formúla reiknar <em>XY</em> þegar <em>X</em> er í A2 og <em>Y</em> í B2?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_THU_Q2" value="product" data-save="W8_THU_Q2"> =A2*B2</label><label class="quiz-option"><input type="radio" name="W8_THU_Q2" value="add" data-save="W8_THU_Q2"> =A2+B2</label><label class="quiz-option"><input type="radio" name="W8_THU_Q2" value="squareboth" data-save="W8_THU_Q2"> =(A2+B2)^2</label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+        <div class="quiz-card" data-quiz="W8_THU_Q3" data-answer="scatter" data-correct="Rétt. Punktarit (Scatter) sýnir pörð X,Y-gildi sem punkta." data-wrong="Pörð tölugildi eiga að birtast sem punktar með X á lárétta ásnum og Y á lóðrétta ásnum."><h4>3. Hvaða graftegund á að velja fyrir pörð (<em>X</em>, <em>Y</em>)-gögn?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_THU_Q3" value="bar" data-save="W8_THU_Q3"> Stöplarit</label><label class="quiz-option"><input type="radio" name="W8_THU_Q3" value="pie" data-save="W8_THU_Q3"> Skífurit</label><label class="quiz-option"><input type="radio" name="W8_THU_Q3" value="scatter" data-save="W8_THU_Q3"> Punktarit (Scatter)</label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+      </div><div class="warmup-status" aria-live="polite">0 af 3 rétt</div></article></section>
+      <section class="section" id="thu-book3"><div class="section-head"><span class="badge core">KJARNI</span><h3>Dæmi 3 · bls. 231</h3></div>
+        <article class="card core-card"><p><strong>Þyngd feðra og sona · <em>N</em> = 10</strong></p><p>Opnið tómt vinnublað í Excel og sækið gögnin úr Dæmi 3 í kennslubókinni.</p>
+          <div class="steps">
+            <label class="check-row"><input type="checkbox" data-save="thu_x"><span>1. Sláið <em>X</em>-gildi í einn dálk.</span></label><label class="check-row"><input type="checkbox" data-save="thu_y"><span>2. Sláið <em>Y</em>-gildi í næsta dálk.</span></label><label class="check-row"><input type="checkbox" data-save="thu_x2"><span>3. Búið til dálkinn <em>X</em><sup>2</sup>.</span></label><label class="check-row"><input type="checkbox" data-save="thu_y2"><span>4. Búið til dálkinn <em>Y</em><sup>2</sup>.</span></label><label class="check-row"><input type="checkbox" data-save="thu_xy"><span>5. Búið til dálkinn <em>XY</em>.</span></label><label class="check-row"><input type="checkbox" data-save="thu_sums"><span>6. Notið <strong>SUM()</strong> til að finna summurnar.</span></label><label class="check-row"><input type="checkbox" data-save="thu_scatter"><span>7. Búið til punktarit (<em>Scatter</em>).</span></label><label class="check-row"><input type="checkbox" data-save="thu_labels"><span>8. Merkið ása og gefið grafinu viðeigandi titil.</span></label>
+          </div>
+          <div class="code-list" aria-label="Dæmi um Excel-formúlur"><div class="code-line">=A2^2</div><div class="code-line">=B2^2</div><div class="code-line">=A2*B2</div><div class="code-line">=SUM(...)</div></div>
+          <div class="notice"><strong>Í dag:</strong> Ekki nota <strong>CORREL()</strong> og ekki bæta við trendline eða aðhvarfslínu.</div>
+          <div class="field"><label for="excelCompare">Hvað gerðum við sjálf í gær sem Excel gerði fyrir okkur í dag?</label><textarea id="excelCompare" data-save="thu_compare"></textarea></div>
+          <label class="check-row completion"><input type="checkbox" data-core="W8_THU_BOOK3"><span>Ég hef lokið Dæmi 3 og varðveiti Excel-vinnuna.</span></label>
+        </article>
+      </section>
+      <section class="section"><div class="section-head"><span class="badge reserve">VARA</span><h3>Ef tími vinnst</h3></div><article class="card reserve-card"><ol><li>Dæmi 1 · bls. 231.</li><li>Dæmi 5 · bls. 232.</li></ol><label class="check-row"><input type="checkbox" data-save="thu_extra"><span>Ég vann í VARA-verkefnum.</span></label></article></section>
+    </section>
+
+    <section class="panel" id="panel-fri" data-panel="fri">
+      <div class="day-head"><p class="eyebrow">Föstudagur · Excel</p><h2>Excel sem greiningartól</h2><p class="goal">Nú notum við Excel til að reikna fylgni hratt og einbeitum okkur að túlkun.</p></div>
+      <section class="section"><article class="card"><h3>CORREL()</h3><p>Fallið reiknar fylgnistuðulinn <em>r</em> fyrir tvö gagnasvið.</p><div class="code-line">=CORREL(X-svið; Y-svið)</div><p class="muted">Veljið samsvarandi <em>X</em>- og <em>Y</em>-gildi. Ekki bæta við trendline.</p></article></section>
+      <section class="section" id="fri-warmup" data-warmup="W8_FRI_WARMUP"><div class="section-head"><span class="badge core">UPPHITUN</span><h3>Frá Excel-svari yfir í túlkun</h3></div><article class="card warmup"><p class="warmup-intro">Æfðu fyrst val á falli og túlkun. Aðalgreiningin fer síðan fram í Excel.</p><div class="quiz-grid">
+        <div class="quiz-card" data-quiz="W8_FRI_Q1" data-answer="correl" data-correct="Rétt. CORREL ber saman tvö jafn löng gagnasvið og skilar fylgnistuðlinum r." data-wrong="Fallið þarf að fá X-sviðið og Y-sviðið sem tvö aðskilin viðföng."><h4>1. Hvaða uppsetning reiknar fylgni milli X-gilda í A2:A11 og Y-gilda í B2:B11?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_FRI_Q1" value="correl" data-save="W8_FRI_Q1"> =CORREL(A2:A11;B2:B11)</label><label class="quiz-option"><input type="radio" name="W8_FRI_Q1" value="sum" data-save="W8_FRI_Q1"> =SUM(A2:B11)</label><label class="quiz-option"><input type="radio" name="W8_FRI_Q1" value="avg" data-save="W8_FRI_Q1"> =AVERAGE(A2:A11)</label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+        <div class="quiz-card" data-quiz="W8_FRI_Q2" data-answer="strong-negative" data-correct="Rétt. Formerkið er neikvætt og |r| = 0,78 er töluvert nálægt 1." data-wrong="Túlkaðu formerkið sem stefnu og stærð |r| sem styrk."><h4>2. Excel gefur <em>r</em> = −0,78. Hver er besta lýsingin?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_FRI_Q2" value="weak-negative" data-save="W8_FRI_Q2"> Veik neikvæð fylgni</label><label class="quiz-option"><input type="radio" name="W8_FRI_Q2" value="strong-negative" data-save="W8_FRI_Q2"> Fremur sterk neikvæð fylgni</label><label class="quiz-option"><input type="radio" name="W8_FRI_Q2" value="strong-positive" data-save="W8_FRI_Q2"> Fremur sterk jákvæð fylgni</label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+        <div class="quiz-card" data-quiz="W8_FRI_Q3" data-answer="near-zero" data-correct="Rétt. Dreift punktaský án skýrrar línulegrar stefnu passar við r nálægt 0." data-wrong="Ef punktarnir sýna hvorki skýra hækkun né lækkun er línulega fylgnin lítil."><h4>3. Punktarit sýnir dreift punktaský án skýrrar stefnu. Hvaða gildi passar best?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_FRI_Q3" value="near-one" data-save="W8_FRI_Q3"> <em>r</em> = +0,94</label><label class="quiz-option"><input type="radio" name="W8_FRI_Q3" value="near-zero" data-save="W8_FRI_Q3"> <em>r</em> = +0,08</label><label class="quiz-option"><input type="radio" name="W8_FRI_Q3" value="near-minus" data-save="W8_FRI_Q3"> <em>r</em> = −0,91</label></div><div class="quiz-feedback" aria-live="polite"></div></div>
+      </div><div class="warmup-status" aria-live="polite">0 af 3 rétt</div></article></section>
+      <section class="section" id="fri-book12"><div class="section-head"><span class="badge core">KJARNI</span><h3>Dæmi 12a · bls. 235</h3></div>
+        <article class="card core-card"><p><strong>Söngvakeppnin 1987 · stigagjöf Akureyrar og Reykjavíkur</strong></p><p>Sækið gögnin úr Dæmi 12a í kennslubókinni.</p>
+          <div class="steps"><label class="check-row"><input type="checkbox" data-save="fri_enter"><span>Sláið gögnin inn í Excel.</span></label><label class="check-row"><input type="checkbox" data-save="fri_scatter"><span>Búið til punktarit.</span></label><label class="check-row"><input type="checkbox" data-save="fri_axes"><span>Merkið ása.</span></label><label class="check-row"><input type="checkbox" data-save="fri_correl"><span>Notið <strong>CORREL()</strong>.</span></label></div>
+          <div class="field short-input"><label for="friR"><em>r</em> =</label><input id="friR" data-save="fri_r" inputmode="decimal"></div>
+          <fieldset class="field" style="border:0;padding:0"><legend class="field-title">Stefna fylgninnar</legend><div class="choice-row"><label class="choice"><input type="radio" name="friDirection" value="positive" data-save="fri_direction"> Jákvæð</label><label class="choice"><input type="radio" name="friDirection" value="negative" data-save="fri_direction"> Neikvæð</label></div></fieldset>
+          <div class="field"><label for="friInterpretation">Túlkun: Metið styrkinn og lýsið niðurstöðunni í samhengi við gögnin.</label><textarea id="friInterpretation" data-save="fri_interpretation"></textarea></div>
+          <label class="check-row completion"><input type="checkbox" data-core="W8_FRI_BOOK12A"><span>Ég hef lokið Dæmi 12a og varðveiti Excel-vinnuna og túlkunina.</span></label>
+        </article>
+      </section>
+      <section class="section"><div class="section-head"><span class="badge reserve">VARA</span><h3>Ef tími vinnst</h3></div><article class="card reserve-card"><ol><li>Dæmi 7a · bls. 233.</li><li>Dæmi 6a · bls. 232.</li></ol><label class="check-row"><input type="checkbox" data-save="fri_extra"><span>Ég vann í VARA-verkefnum.</span></label></article></section>
+    </section>
+
+    <section class="panel" id="panel-self" data-panel="self">
+      <div class="day-head"><p class="eyebrow">Lok vikunnar</p><h2>Hvað kann ég?</h2><p class="goal">Merktu við það sem þú telur þig geta núna. Þetta er sjálfsmat, ekki skil eða einkunn.</p></div>
+      <div class="summary-grid" aria-live="polite"><div class="summary-box"><strong id="sumTue">0/3</strong>Þriðjudagur</div><div class="summary-box"><strong id="sumWed">0/2</strong>Miðvikudagur</div><div class="summary-box"><strong id="sumThu">0/2</strong>Fimmtudagur</div><div class="summary-box"><strong id="sumFri">0/2</strong>Föstudagur</div><div class="summary-box"><strong id="sumAll">0%</strong>Kjarni</div></div>
+      <article class="card"><div class="self-grid">
+        <label class="self-item"><input type="checkbox" data-save="self_scatter"><span>Ég get búið til punktarit úr pörðum gögnum.</span></label><label class="self-item"><input type="checkbox" data-save="self_direction"><span>Ég get greint jákvæða og neikvæða fylgni.</span></label><label class="self-item"><input type="checkbox" data-save="self_strength"><span>Ég get metið styrk fylgni.</span></label><label class="self-item"><input type="checkbox" data-save="self_interpret_r"><span>Ég get túlkað fylgnistuðulinn <em>r</em>.</span></label><label class="self-item"><input type="checkbox" data-save="self_columns"><span>Ég get sett upp <em>X</em>, <em>Y</em>, <em>X</em><sup>2</sup>, <em>Y</em><sup>2</sup> og <em>XY</em>.</span></label><label class="self-item"><input type="checkbox" data-save="self_manual_r"><span>Ég get reiknað Pearson <em>r</em> með reikniformúlunni.</span></label><label class="self-item"><input type="checkbox" data-save="self_excel_scatter"><span>Ég get búið til punktarit í Excel.</span></label><label class="self-item"><input type="checkbox" data-save="self_correl"><span>Ég get notað <strong>CORREL()</strong> í Excel.</span></label><label class="self-item"><input type="checkbox" data-save="self_explain"><span>Ég get útskýrt niðurstöðu fylgnigreiningar í orðum.</span></label>
+      </div></article>
+    </section>
+  </main>
+</div>
+<script>
+(()=>{
+  'use strict';
+  const STORAGE_KEY='STAER3TO05_VIKA8_v1';
+  const CORE={tue:['W8_TUE_WARMUP','W8_TUE_BOOK1','W8_TUE_SIMPSONS'],wed:['W8_WED_WARMUP','W8_WED_BOOK4'],thu:['W8_THU_WARMUP','W8_THU_BOOK3'],fri:['W8_FRI_WARMUP','W8_FRI_BOOK12A']};
+  // Bætið dagsauðkenni hér við þegar kennari vill opna daginn.
+  const ENABLED_TABS=new Set(['tue']);
+  const ALL_CORE=[...ENABLED_TABS].flatMap(day=>CORE[day]||[]);
+  const defaults={version:1,activeTab:'tue',values:{},core:{}};
+  let state=load();
+  function load(){try{const raw=localStorage.getItem(STORAGE_KEY);if(!raw)return structuredClone(defaults);const saved=JSON.parse(raw);return{...structuredClone(defaults),...saved,values:{...defaults.values,...(saved.values||{})},core:{...defaults.core,...(saved.core||{})}}}catch(e){console.warn('Ekki tókst að lesa vistun.',e);return structuredClone(defaults)}}
+  function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch(e){console.warn('Ekki tókst að vista.',e)}}
+  function buildPearsonRows(){const body=document.getElementById('pearsonRows');for(let i=1;i<=5;i++){const tr=document.createElement('tr');tr.innerHTML=['x','y','x2','y2','xy'].map(k=>`<td><label class="sr-only" for="wed_${k}_${i}">${k.toUpperCase()}, röð ${i}</label><input id="wed_${k}_${i}" data-save="wed_${k}_${i}" inputmode="decimal"></td>`).join('');body.appendChild(tr)}}
+  function restore(){document.querySelectorAll('[data-save]').forEach(el=>{const key=el.dataset.save;const value=state.values[key];if(el.type==='radio')el.checked=value===el.value;else if(el.type==='checkbox')el.checked=Boolean(value);else if(value!==undefined)el.value=value});document.querySelectorAll('[data-core]').forEach(el=>{el.checked=Boolean(state.core[el.dataset.core])})}
+  function readValue(el){if(el.type==='checkbox')return el.checked;if(el.type==='radio')return el.checked?el.value:state.values[el.dataset.save];return el.value}
+  function bindInputs(){document.addEventListener('input',e=>{const el=e.target;if(!el.matches('[data-save]'))return;if(el.type==='radio'&&!el.checked)return;state.values[el.dataset.save]=readValue(el);save()});document.addEventListener('change',e=>{const el=e.target;if(el.matches('[data-core]')){state.core[el.dataset.core]=el.checked;save();updateProgress()}if(el.matches('[data-save]')){if(el.type==='radio'&&!el.checked)return;state.values[el.dataset.save]=readValue(el);save()}})}
+  function evaluateQuiz(card){const id=card.dataset.quiz;const selected=card.querySelector('input[type="radio"]:checked');const feedback=card.querySelector('.quiz-feedback');if(!selected){feedback.className='quiz-feedback';feedback.textContent='';state.values[id+'_correct']=false;return}const correct=selected.value===card.dataset.answer;state.values[id+'_correct']=correct;feedback.className='quiz-feedback show '+(correct?'correct':'');feedback.innerHTML=(correct?'✓ ':'× ')+(correct?card.dataset.correct:card.dataset.wrong)}
+  function updateWarmup(section){const cards=[...section.querySelectorAll('[data-quiz]')];const right=cards.filter(c=>state.values[c.dataset.quiz+'_correct']).length;const complete=right===cards.length;const coreId=section.dataset.warmup;state.core[coreId]=complete;const status=section.querySelector('.warmup-status');status.textContent=complete?`✓ Upphitun lokið · ${right} af ${cards.length} rétt`:`${right} af ${cards.length} rétt`;status.classList.toggle('complete',complete);save();updateProgress()}
+  function initQuizzes(){document.querySelectorAll('[data-quiz]').forEach(card=>evaluateQuiz(card));document.querySelectorAll('[data-warmup]').forEach(section=>updateWarmup(section));document.addEventListener('change',e=>{if(!e.target.matches('[data-quiz] input[type="radio"]'))return;const card=e.target.closest('[data-quiz]');evaluateQuiz(card);updateWarmup(e.target.closest('[data-warmup]'))})}
+  function setTab(id,focus=false){const safe=ENABLED_TABS.has(id)&&document.querySelector(`[data-panel="${CSS.escape(id)}"]`)?id:'tue';document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.dataset.panel===safe));document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===safe)));state.activeTab=safe;save();if(focus)document.querySelector(`[data-panel="${CSS.escape(safe)}"] h2`)?.scrollIntoView({block:'start'})}
+  function bindTabs(){document.querySelectorAll('.tab').forEach(btn=>{const enabled=ENABLED_TABS.has(btn.dataset.tab);btn.disabled=!enabled;btn.setAttribute('aria-disabled',String(!enabled));btn.addEventListener('click',()=>{if(enabled)setTab(btn.dataset.tab,true)})})}
+  function done(ids){return ids.filter(id=>state.core[id]).length}
+  function updateProgress(){const finished=done(ALL_CORE),total=ALL_CORE.length,pct=Math.round(100*finished/total);document.getElementById('progressCount').textContent=`${finished} af ${total} kjarnaverkefnum`;const track=document.querySelector('.progress-track');track.setAttribute('aria-valuenow',String(pct));document.getElementById('progressBar').style.width=`${pct}%`;document.getElementById('sumTue').textContent=`${done(CORE.tue)}/${CORE.tue.length}`;document.getElementById('sumWed').textContent=`${done(CORE.wed)}/${CORE.wed.length}`;document.getElementById('sumThu').textContent=`${done(CORE.thu)}/${CORE.thu.length}`;document.getElementById('sumFri').textContent=`${done(CORE.fri)}/${CORE.fri.length}`;document.getElementById('sumAll').textContent=`${pct}%`}
+  buildPearsonRows();restore();bindInputs();bindTabs();initQuizzes();setTab(state.activeTab);updateProgress();
+})();
+</script>
+</body>
+</html>
