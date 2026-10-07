@@ -35,7 +35,7 @@
   <div class="tabs-wrap">
     <nav class="tabs" aria-label="Dagar vinnubókar">
       <button class="tab" type="button" data-tab="tue" aria-selected="true">Þriðjudagur</button>
-      <button class="tab" type="button" data-tab="wed" aria-selected="false" disabled aria-disabled="true">Miðvikudagur<span class="tab-note">Opnað síðar</span></button>
+      <button class="tab" type="button" data-tab="wed" aria-selected="false">Miðvikudagur</button>
       <button class="tab" type="button" data-tab="thu" aria-selected="false" disabled aria-disabled="true">Fimmtudagur<span class="tab-note">Opnað síðar</span></button>
       <button class="tab" type="button" data-tab="fri" aria-selected="false" disabled aria-disabled="true">Föstudagur<span class="tab-note">Opnað síðar</span></button>
       <button class="tab" type="button" data-tab="self" aria-selected="false" disabled aria-disabled="true">Hvað kann ég?<span class="tab-note">Opnað síðar</span></button>
@@ -144,7 +144,7 @@
     </section>
 
     <section class="panel" id="panel-wed" data-panel="wed">
-      <div class="day-head"><p class="eyebrow">Miðvikudagur · Kafli 10.3</p><h2>Reiknum Pearson <em>r</em></h2><p class="goal">Í dag færum við okkur frá því að sjá fylgni yfir í að reikna hana.</p></div>
+      <div class="day-head"><p class="eyebrow">Miðvikudagur · Kaflar 10.3–10.4</p><h2>Pearson <em>r</em> og marktækni</h2><p class="goal">Í dag reiknar þú fylgni, túlkar niðurstöðuna og metur hvort fylgnin sé marktæk.</p></div>
       <section class="section" id="wed-warmup" data-warmup="W8_WED_WARMUP"><div class="section-head"><span class="badge core">UPPHITUN</span><h3>Undirbúðu vinnutöfluna</h3></div><article class="card warmup"><p class="warmup-intro">Þessi stuttu atriði undirbúa handreikninginn. Aðalútreikningurinn fer áfram fram á töflu.</p><div class="quiz-grid">
         <div class="quiz-card" data-quiz="W8_WED_Q1" data-answer="five" data-correct="Rétt. Vinnutaflan þarf dálkana X, Y, X², Y² og XY." data-wrong="Hugsaðu um allar stærðirnar sem koma fyrir í Pearson-formúlunni."><h4>1. Hvaða dálkar eiga að vera í 5-dálka vinnutöflunni?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_WED_Q1" value="five" data-save="W8_WED_Q1"> <em>X</em>, <em>Y</em>, <em>X</em><sup>2</sup>, <em>Y</em><sup>2</sup>, <em>XY</em></label><label class="quiz-option"><input type="radio" name="W8_WED_Q1" value="four" data-save="W8_WED_Q1"> <em>X</em>, <em>Y</em>, <em>X</em> + <em>Y</em>, <em>X</em> − <em>Y</em></label><label class="quiz-option"><input type="radio" name="W8_WED_Q1" value="three" data-save="W8_WED_Q1"> <em>X</em>, <em>Y</em>, <em>XY</em></label></div><div class="quiz-feedback" aria-live="polite"></div></div>
         <div class="quiz-card" data-quiz="W8_WED_Q2" data-answer="28" data-correct="Rétt. XY fæst með því að margfalda saman gildin í sömu röð: 4 · 7 = 28." data-wrong="XY er margfeldi X og Y í sömu gagnaröð."><h4>2. Ef <em>X</em> = 4 og <em>Y</em> = 7, hvað er <em>XY</em>?</h4><div class="quiz-options"><label class="quiz-option"><input type="radio" name="W8_WED_Q2" value="11" data-save="W8_WED_Q2"> 11</label><label class="quiz-option"><input type="radio" name="W8_WED_Q2" value="28" data-save="W8_WED_Q2"> 28</label><label class="quiz-option"><input type="radio" name="W8_WED_Q2" value="49" data-save="W8_WED_Q2"> 49</label></div><div class="quiz-feedback" aria-live="polite"></div></div>
@@ -153,18 +153,53 @@
       <section class="section" id="wed-book4">
         <div class="section-head"><span class="badge core">KJARNI</span><h3>Dæmi 4 · bls. 231</h3></div>
         <article class="card core-card">
-          <p><strong>Verð og sala · <em>N</em> = 5</strong></p><p>Vinnið 2–3 saman við töflu. Sækið gildin úr Dæmi 4 í kennslubókinni.</p>
+          <p><strong>Verð og sala · <em>N</em> = 5</strong></p><p>Staðnemar vinna 2–3 saman á töflu. Nemendur utan kennslustofu vinna verkefnið í reikningsbók. Sækið gildin úr Dæmi 4 í kennslubókinni.</p>
+          <p class="muted"><strong>Ábending:</strong> Skoðið sýnidæmið á bls. 228 í kennslubókinni ef þið þurfið að rifja upp uppsetningu og útreikning.</p>
           <ol><li>Skráið <em>X</em> og <em>Y</em>.</li><li>Reiknið <em>X</em><sup>2</sup>.</li><li>Reiknið <em>Y</em><sup>2</sup>.</li><li>Reiknið <em>XY</em>.</li><li>Finnið dálkasummurnar.</li><li>Setjið summurnar í Pearson-formúluna.</li><li>Reiknið <em>r</em>.</li><li>Túlkið niðurstöðuna.</li></ol>
-          <div class="table-scroll"><table aria-label="Vinnutafla fyrir Pearson r"><thead><tr><th><em>X</em></th><th><em>Y</em></th><th><em>X</em><sup>2</sup></th><th><em>Y</em><sup>2</sup></th><th><em>XY</em></th></tr></thead><tbody id="pearsonRows"></tbody></table></div>
-          <div class="sum-grid"><label>ΣX<input data-save="wed_sum_x" inputmode="decimal"></label><label>ΣY<input data-save="wed_sum_y" inputmode="decimal"></label><label>ΣX²<input data-save="wed_sum_x2" inputmode="decimal"></label><label>ΣY²<input data-save="wed_sum_y2" inputmode="decimal"></label><label>ΣXY<input data-save="wed_sum_xy" inputmode="decimal"></label><label>N<input data-save="wed_n" value="5" inputmode="numeric"></label></div>
           <div class="formula">\[r_{xy}=\frac{N\sum XY-(\sum X)(\sum Y)}{\sqrt{\left[N\sum X^2-(\sum X)^2\right]\left[N\sum Y^2-(\sum Y)^2\right]}}\]</div>
           <div class="warning">⚠️ Ekki rugla saman Σ<em>X</em><sup>2</sup> og (Σ<em>X</em>)<sup>2</sup>.</div>
-          <div class="field short-input"><label for="pearsonR"><em>r</em> =</label><input id="pearsonR" type="text" data-save="wed_r" inputmode="decimal"></div>
+          <div class="field short-input"><label for="pearsonR"><em>r</em><sub>xy</sub> =</label><input id="pearsonR" type="text" data-save="wed_r" inputmode="decimal"></div>
           <div class="split"><div class="field"><label for="pearsonSign">Hvað segir formerkið okkur?</label><textarea id="pearsonSign" data-save="wed_sign"></textarea></div><div class="field"><label for="pearsonSize">Hvað segir stærð <em>r</em> okkur?</label><textarea id="pearsonSize" data-save="wed_size"></textarea></div></div>
-          <label class="check-row completion"><input type="checkbox" data-core="W8_WED_BOOK4"><span>Við höfum lokið Dæmi 4 og varðveitt útreikninga og túlkun.</span></label>
+
+          <h4>Marktækni fylgnistuðuls</h4>
+          <div class="notice">
+            <p><strong>Hvað eru marktæknimörk?</strong> Marktæknimörkin segja okkur hversu stór fylgnistuðullinn þarf að vera, miðað við fjölda talnapara, til að við teljum fylgnina marktæka.</p>
+            <p><em>N</em> segir okkur hvaða röð við notum og α segir okkur hvaða dálk við notum. Í verkefnum vinnubókarinnar notum við α = 0,05. Talan þar sem röðin og dálkurinn mætast er marktæknimarkið.</p>
+            <p>Berðu |<em>r</em>| saman við marktæknimarkið. Ef |<em>r</em>| er stærra en markið telst fylgnin marktæk samkvæmt töflunni.</p>
+            <p>Því fleiri talnapör sem við höfum, því minni þarf fylgnin almennt að vera til að teljast marktæk samkvæmt töflunni.</p>
+          </div>
+          <p>Marktæknimörkin eru gefin sem ± gildi. Því skiptir formerki <em>r</em> ekki máli í samanburðinum; berðu stærðina <strong>|<em>r</em>|</strong> saman við markið.</p>
+
+          <div class="notice"><strong>Stutt sýnidæmi:</strong> Ef <em>N</em> = 10 og α = 0,05 finnum við <em>N</em> = 10 í töflunni hér fyrir neðan og lesum úr dálkinum α = 0,05. Þar er marktæknimarkið 0,632. Fylgnistuðullinn þarf því að vera stærri að tölugildi en 0,632 til að teljast marktækur við α = 0,05.</div>
+          <div class="table-scroll"><table aria-label="Tafla yfir marktækni fylgnistuðla"><thead><tr><th><em>N</em></th><th>α = 0,10</th><th>α = 0,05</th><th>α = 0,01</th></tr></thead><tbody>
+            <tr><td>4</td><td>0,900</td><td>0,950</td><td>0,990</td></tr><tr><td>5</td><td>0,805</td><td>0,878</td><td>0,959</td></tr><tr><td>6</td><td>0,729</td><td>0,811</td><td>0,917</td></tr><tr><td>7</td><td>0,669</td><td>0,754</td><td>0,875</td></tr><tr><td>8</td><td>0,621</td><td>0,707</td><td>0,834</td></tr><tr><td>9</td><td>0,582</td><td>0,666</td><td>0,798</td></tr><tr><td>10</td><td>0,549</td><td>0,632</td><td>0,765</td></tr><tr><td>11</td><td>0,521</td><td>0,602</td><td>0,735</td></tr><tr><td>12</td><td>0,497</td><td>0,576</td><td>0,708</td></tr><tr><td>13</td><td>0,476</td><td>0,553</td><td>0,684</td></tr><tr><td>14</td><td>0,458</td><td>0,532</td><td>0,661</td></tr><tr><td>15</td><td>0,441</td><td>0,514</td><td>0,641</td></tr><tr><td>16</td><td>0,426</td><td>0,497</td><td>0,623</td></tr><tr><td>17</td><td>0,412</td><td>0,482</td><td>0,606</td></tr><tr><td>18</td><td>0,400</td><td>0,468</td><td>0,590</td></tr><tr><td>19</td><td>0,389</td><td>0,456</td><td>0,575</td></tr><tr><td>20</td><td>0,378</td><td>0,444</td><td>0,561</td></tr><tr><td>25</td><td>0,337</td><td>0,396</td><td>0,505</td></tr><tr><td>30</td><td>0,306</td><td>0,361</td><td>0,463</td></tr><tr><td>35</td><td>0,283</td><td>0,334</td><td>0,430</td></tr><tr><td>40</td><td>0,264</td><td>0,312</td><td>0,403</td></tr><tr><td>45</td><td>0,248</td><td>0,294</td><td>0,380</td></tr><tr><td>50</td><td>0,235</td><td>0,279</td><td>0,361</td></tr><tr><td>60</td><td>0,214</td><td>0,254</td><td>0,330</td></tr><tr><td>70</td><td>0,198</td><td>0,235</td><td>0,306</td></tr><tr><td>80</td><td>0,185</td><td>0,220</td><td>0,286</td></tr><tr><td>90</td><td>0,174</td><td>0,207</td><td>0,270</td></tr><tr><td>100</td><td>0,165</td><td>0,197</td><td>0,256</td></tr>
+          </tbody></table></div>
+
+          <h4>Metið marktækni niðurstöðunnar í Dæmi 4</h4>
+          <p>Notið <em>r</em><sub>xy</sub> sem þið reiknuðuð í Dæmi 4 og metið hvort fylgnin sé marktæk við α = 0,05.</p>
+          <div class="split"><div class="field"><label for="wedSigN">1. Hvert er <em>N</em> í Dæmi 4?</label><input id="wedSigN" type="text" data-save="wed_sig_n" inputmode="numeric"></div><div class="field"><label for="wedSigLimit">2. Hvert er marktæknimarkið við α = 0,05?</label><input id="wedSigLimit" type="text" data-save="wed_sig_limit" inputmode="decimal"></div></div>
+          <fieldset class="field" style="border:0;padding:0"><legend class="field-title">3. Er fylgnin í Dæmi 4 marktæk við α = 0,05?</legend><div class="choice-row"><label class="choice"><input type="radio" name="wedSigResult" value="yes" data-save="wed_sig_result"> Já</label><label class="choice"><input type="radio" name="wedSigResult" value="no" data-save="wed_sig_result"> Nei</label></div></fieldset>
+          <div class="field"><label for="wedSigReason">4. Rökstyddu með því að bera |<em>r</em>| saman við marktæknimarkið.</label><textarea id="wedSigReason" data-save="wed_sig_reason"></textarea></div>
+          <label class="check-row completion"><input type="checkbox" data-core="W8_WED_BOOK4"><span>Við höfum lokið Dæmi 4 og varðveitt útreikninga, túlkun og marktæknimat.</span></label>
         </article>
       </section>
-      <section class="section"><div class="section-head"><span class="badge reserve">VARA</span><h3>Ef þið klárið fyrr</h3></div><article class="card reserve-card"><ol><li>Sýnidæmi 6 / Tafla 2 · bls. 228.</li><li>Dæmi 2 · bls. 231.</li></ol><label class="check-row"><input type="checkbox" data-save="wed_extra"><span>Við unnum í VARA-verkefnum.</span></label></article></section>
+
+      <section class="section" id="wed-independent">
+        <div class="section-head"><span class="badge core">KJARNI</span><h3>Einstaklingsvinna</h3></div>
+        <p class="notice">Nú hefur þú farið í gegnum uppsetningu, útreikning og túlkun Pearson <em>r</em> með hópnum. Næstu dæmi vinnur þú sjálf/ur.</p>
+
+        <article class="card core-card" id="wed-book3">
+          <h4>Dæmi 3 · bls. 231</h4>
+          <p>Vinna sjálfstætt í reikningsbók.</p>
+          <p class="muted">Reiknaðu <em>r</em><sub>xy</sub>, túlkaðu niðurstöðuna og athugaðu marktækni við α = 0,05.</p>
+        </article>
+
+        <article class="card core-card" id="wed-book5">
+          <h4>Dæmi 5 · bls. 232</h4>
+          <p>Vinna sjálfstætt í reikningsbók.</p>
+          <p class="muted">Reiknaðu <em>r</em><sub>xy</sub>, túlkaðu niðurstöðuna og athugaðu marktækni við α = 0,05.</p>
+        </article>
+      </section>
     </section>
 
     <section class="panel" id="panel-thu" data-panel="thu">
@@ -223,13 +258,12 @@
   const STORAGE_KEY='STAER3TO05_VIKA8_v1';
   const CORE={tue:['W8_TUE_WARMUP','W8_TUE_BOOK1','W8_TUE_SIMPSONS'],wed:['W8_WED_WARMUP','W8_WED_BOOK4'],thu:['W8_THU_WARMUP','W8_THU_BOOK3'],fri:['W8_FRI_WARMUP','W8_FRI_BOOK12A']};
   // Bætið dagsauðkenni hér við þegar kennari vill opna daginn.
-  const ENABLED_TABS=new Set(['tue']);
+  const ENABLED_TABS=new Set(['tue','wed']);
   const ALL_CORE=[...ENABLED_TABS].flatMap(day=>CORE[day]||[]);
   const defaults={version:1,activeTab:'tue',values:{},core:{}};
   let state=load();
   function load(){try{const raw=localStorage.getItem(STORAGE_KEY);if(!raw)return structuredClone(defaults);const saved=JSON.parse(raw);return{...structuredClone(defaults),...saved,values:{...defaults.values,...(saved.values||{})},core:{...defaults.core,...(saved.core||{})}}}catch(e){console.warn('Ekki tókst að lesa vistun.',e);return structuredClone(defaults)}}
   function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch(e){console.warn('Ekki tókst að vista.',e)}}
-  function buildPearsonRows(){const body=document.getElementById('pearsonRows');for(let i=1;i<=5;i++){const tr=document.createElement('tr');tr.innerHTML=['x','y','x2','y2','xy'].map(k=>`<td><label class="sr-only" for="wed_${k}_${i}">${k.toUpperCase()}, röð ${i}</label><input id="wed_${k}_${i}" data-save="wed_${k}_${i}" inputmode="decimal"></td>`).join('');body.appendChild(tr)}}
   function restore(){document.querySelectorAll('[data-save]').forEach(el=>{const key=el.dataset.save;const value=state.values[key];if(el.type==='radio')el.checked=value===el.value;else if(el.type==='checkbox')el.checked=Boolean(value);else if(value!==undefined)el.value=value});document.querySelectorAll('[data-core]').forEach(el=>{el.checked=Boolean(state.core[el.dataset.core])})}
   function readValue(el){if(el.type==='checkbox')return el.checked;if(el.type==='radio')return el.checked?el.value:state.values[el.dataset.save];return el.value}
   function bindInputs(){document.addEventListener('input',e=>{const el=e.target;if(!el.matches('[data-save]'))return;if(el.type==='radio'&&!el.checked)return;state.values[el.dataset.save]=readValue(el);save()});document.addEventListener('change',e=>{const el=e.target;if(el.matches('[data-core]')){state.core[el.dataset.core]=el.checked;save();updateProgress()}if(el.matches('[data-save]')){if(el.type==='radio'&&!el.checked)return;state.values[el.dataset.save]=readValue(el);save()}})}
@@ -240,7 +274,7 @@
   function bindTabs(){document.querySelectorAll('.tab').forEach(btn=>{const enabled=ENABLED_TABS.has(btn.dataset.tab);btn.disabled=!enabled;btn.setAttribute('aria-disabled',String(!enabled));btn.addEventListener('click',()=>{if(enabled)setTab(btn.dataset.tab,true)})})}
   function done(ids){return ids.filter(id=>state.core[id]).length}
   function updateProgress(){const finished=done(ALL_CORE),total=ALL_CORE.length,pct=Math.round(100*finished/total);document.getElementById('progressCount').textContent=`${finished} af ${total} kjarnaverkefnum`;const track=document.querySelector('.progress-track');track.setAttribute('aria-valuenow',String(pct));document.getElementById('progressBar').style.width=`${pct}%`;document.getElementById('sumTue').textContent=`${done(CORE.tue)}/${CORE.tue.length}`;document.getElementById('sumWed').textContent=`${done(CORE.wed)}/${CORE.wed.length}`;document.getElementById('sumThu').textContent=`${done(CORE.thu)}/${CORE.thu.length}`;document.getElementById('sumFri').textContent=`${done(CORE.fri)}/${CORE.fri.length}`;document.getElementById('sumAll').textContent=`${pct}%`}
-  buildPearsonRows();restore();bindInputs();bindTabs();initQuizzes();setTab(state.activeTab);updateProgress();
+  restore();bindInputs();bindTabs();initQuizzes();setTab(state.activeTab);updateProgress();
 })();
 </script>
 </body>
