@@ -37,7 +37,7 @@
       <button class="tab" type="button" data-tab="tue" aria-selected="true">Þriðjudagur</button>
       <button class="tab" type="button" data-tab="wed" aria-selected="false">Miðvikudagur</button>
       <button class="tab" type="button" data-tab="thu" aria-selected="false">Fimmtudagur</button>
-      <button class="tab" type="button" data-tab="fri" aria-selected="false" disabled aria-disabled="true">Föstudagur<span class="tab-note">Opnað síðar</span></button>
+      <button class="tab" type="button" data-tab="fri" aria-selected="false">Föstudagur</button>
       <button class="tab" type="button" data-tab="self" aria-selected="false" disabled aria-disabled="true">Hvað kann ég?<span class="tab-note">Opnað síðar</span></button>
     </nav>
   </div>
@@ -311,7 +311,7 @@
   const STORAGE_KEY='STAER3TO05_VIKA8_v1';
   const CORE={tue:['W8_TUE_WARMUP','W8_TUE_BOOK1','W8_TUE_SIMPSONS'],wed:['W8_WED_WARMUP','W8_WED_BOOK4'],thu:['W8_THU_EXCEL_Z','W8_THU_EXCEL_CORR'],fri:['W8_FRI_EXCEL_ANALYSIS','W8_FRI_EXCEL_INTERPRET']};
   // Bætið dagsauðkenni hér við þegar kennari vill opna daginn.
-  const ENABLED_TABS=new Set(['tue','wed','thu']);
+  const ENABLED_TABS=new Set(['tue','wed','thu','fri']);
   const ALL_CORE=[...ENABLED_TABS].flatMap(day=>CORE[day]||[]);
   const defaults={version:1,activeTab:'tue',values:{},core:{}};
   let state=load();
